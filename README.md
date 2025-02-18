@@ -71,7 +71,7 @@ crud3/
      DB_USER=tu_usuario
      DB_PASSWORD=tu_contraseña
      DB_NAME=tu_base_de_datos
-     PORT=5000     # El servidor usará este puerto, o 3000 por defecto si no se especifica
+     PORT=3000     # Puerto opcional, 3000 es el valor por defecto
      ```
 
 4. **Instalar dependencias del frontend**
@@ -87,7 +87,7 @@ crud3/
    cd backend
    node server.js
    ```
-   El servidor estará corriendo en `http://localhost:5000` (o en el puerto especificado en el archivo .env)
+   El servidor estará corriendo en `http://localhost:3000` (o en el puerto especificado en el archivo .env)
 
 2. **Iniciar el frontend**
    ```bash
