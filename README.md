@@ -1,78 +1,143 @@
-# CRUD Application with React PWA and Node.js Backend
+# CRUD con React.js + Node.js
 
-This is a full-stack CRUD (Create, Read, Update, Delete) application with a React PWA frontend and Node.js/Express backend, connected to a MySQL database.
+Una aplicación CRUD (Create, Read, Update, Delete) moderna y eficiente construida con React.js en el frontend y Node.js en el backend, conectada a una base de datos MySQL.
 
-## Project Structure
+## 📁 Estructura del Proyecto
 
 ```
 crud3/
-├── backend/           # Node.js backend
-│   ├── server.js     # Express server
-│   ├── .env          # Environment variables
-│   └── database.sql  # Database schema
-└── frontend/         # React PWA frontend
+├── backend/           # Backend en Node.js
+│   ├── server.js     # Servidor Express
+│   ├── .env          # Variables de entorno
+│   └── database.sql  # Esquema de la base de datos
+└── frontend/         # Frontend en React
     ├── src/
-    │   ├── App.jsx   # Main application component
-    │   └── sw.js     # Service Worker for PWA
-    └── public/
-        └── manifest.json  # PWA manifest
+    │   ├── App.jsx   # Componente principal
+    │   ├── App.css   # Estilos de la aplicación
+    │   └── main.jsx  # Punto de entrada
+    ├── public/       # Archivos estáticos
+    └── index.html    # HTML principal
 ```
 
-## Setup Instructions
+## Características
 
-### Backend Setup
+- Interfaz moderna y responsive
+- Operaciones CRUD completas
+- Actualizaciones en tiempo real
+- Diseño limpio y minimalista
+- Conexión segura a base de datos
+- Rendimiento optimizado
 
-1. Navigate to the backend directory:
+## Tecnologías Utilizadas
+
+### Frontend
+- React.js
+- Vite (como build tool)
+- CSS moderno
+- Fetch API para peticiones HTTP
+
+### Backend
+- Node.js
+- Express.js
+- MySQL2
+- CORS habilitado
+- Dotenv para variables de entorno
+
+## Requisitos Previos
+
+- Node.js (versión 14 o superior)
+- MySQL
+- npm o yarn
+
+## Instalación
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/Cristobal-Figueroa/node.git
+   cd node
+   ```
+
+2. **Instalar dependencias del backend**
    ```bash
    cd backend
-   ```
-
-2. Install dependencies:
-   ```bash
    npm install
    ```
 
-3. Create the database table using the SQL in `database.sql`
+3. **Configurar variables de entorno del backend**
+   - Crear archivo `.env` en la carpeta `backend`
+   - Agregar las siguientes variables:
+     ```
+     DB_HOST=tu_host
+     DB_USER=tu_usuario
+     DB_PASSWORD=tu_contraseña
+     DB_NAME=tu_base_de_datos
+     PORT=5000
+     ```
 
-4. Start the server:
+4. **Instalar dependencias del frontend**
    ```bash
-   npm start
+   cd ../frontend
+   npm install
    ```
 
-The backend will run on http://localhost:5000
+## Ejecución
 
-### Frontend Setup
+1. **Iniciar el backend**
+   ```bash
+   cd backend
+   node server.js
+   ```
+   El servidor estará corriendo en `http://localhost:5000`
 
-1. Navigate to the frontend directory:
+2. **Iniciar el frontend**
    ```bash
    cd frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
    npm run dev
    ```
+   La aplicación estará disponible en `http://localhost:5173`
 
-The frontend will run on http://localhost:5173
+## Uso
 
-## Features
+1. **Crear un nuevo item**
+   - Ingresa el nombre en el campo "Nombre"
+   - Ingresa la descripción en el campo "Descripción"
+   - Haz clic en "Crear"
 
-- Create, Read, Update, and Delete items
-- Progressive Web App (PWA) support
-- Responsive Material-UI design
-- Offline capability
-- MySQL database integration
-- RESTful API backend
+2. **Ver items**
+   - Los items se muestran automáticamente en la página principal
+   - Si no hay items, verás el mensaje "No hay items para mostrar"
 
-## API Endpoints
+3. **Actualizar un item**
+   - Haz clic en el botón "Actualizar" del item que desees modificar
+   - Ingresa el nuevo nombre y/o descripción en los campos correspondientes
+   - Confirma los cambios
 
-- GET /api/items - Get all items
-- GET /api/items/:id - Get a specific item
-- POST /api/items - Create a new item
-- PUT /api/items/:id - Update an existing item
-- DELETE /api/items/:id - Delete an item
+4. **Eliminar un item**
+   - Haz clic en el botón "Eliminar" del item que desees borrar
+   - El item se eliminará inmediatamente
+
+## Seguridad
+
+- La aplicación utiliza variables de entorno para proteger las credenciales de la base de datos
+- CORS está configurado para permitir solo los orígenes especificados
+- Las consultas a la base de datos están parametrizadas para prevenir inyección SQL
+
+## Contribuir
+
+1. Haz un Fork del proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+
+## Autor
+
+Cristóbal Figueroa
+
+## Contacto
+
+Si tienes preguntas sobre este proyecto, por favor abre un issue en el repositorio.
